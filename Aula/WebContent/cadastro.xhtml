@@ -1,0 +1,68 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml"
+	xmlns:h="http://java.sun.com/jsf/html"
+	xmlns:f="http://java.sun.com/jsf/core">
+
+
+<h:head>
+	<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+	<link rel="stylesheet" type="text/css" href="style-1.css" />
+	<title>JJServiços</title>
+</h:head>
+<h:body>
+	<header id="header" class=""> </header>
+	<div id="div-1">
+		<img src="img/Logo_baixo.jpg" id="logo" alt="logo" />
+	</div>
+	<section>
+	<div id="menu">
+
+		<ul>
+			<li onclick="window.location='index.xhtml'"><a
+				href="index.xhtml">Home</a></li>
+			<li onclick="window.location='historia.xhtml'"><a
+				href="historia.xhtml">História</a></li>
+			<li onclick="window.location='index.xhtml'"><a
+				href="index.xhtml">Clientes</a></li>
+			<li onclick="window.location='contato.xhtml'"><a
+				href="contato.xhtml">Contato</a></li>
+			<li onclick="window.location='cadastro.xhtml'"><a
+				href="cadastro.xhtml">Fale-Conosco</a></li>
+		</ul>
+
+	</div>
+
+	<h:form>
+		<h:panelGrid columns="2">
+
+			<h:outputLabel value="Nome" />
+			<h:inputText value="#{cadastroMB.cliente.nome}" size="30" />
+
+			<h:outputLabel value="Sobrenome" />
+			<h:inputText value="#{cadastroMB.cliente.sobrenome}" size="30" />
+
+			<h:outputLabel value="Email" />
+			<h:inputText value="#{cadastroMB.cliente.email}" size="30" />
+
+			<h:outputLabel value="Telefone" />
+			<h:inputText value="#{cadastroMB.cliente.telefone}" size="30" />
+
+			<h:outputLabel value="Mensagem" />
+			<h:inputText value="#{cadastroMB.cliente.mensagem}" size="60" />
+
+			<h:panelGroup>
+
+				<h:commandButton value="Enviar mensagem"
+					action="#{cadastroMB.enviar}" />
+
+			</h:panelGroup>
+
+
+		</h:panelGrid>
+
+
+	</h:form> </section>
+
+</h:body>
+</html>
